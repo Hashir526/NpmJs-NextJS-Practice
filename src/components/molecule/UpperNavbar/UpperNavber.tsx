@@ -1,5 +1,6 @@
 import React from "react";
 import { FaHeart } from "react-icons/fa";
+import UNavbarButton from "../../atom/UNavbarButton/UNavbarButton";
 
 export function UpperNavber() {
   return (
@@ -11,10 +12,10 @@ export function UpperNavber() {
         <div className="grow ">Neatly Packaged Magic</div>
       </div>
       <div className="flex justify-center self-center gap-4 font-semibold">
-        <div>Pro</div>
-        <div>Teams</div>
-        <div>Pricing</div>
-        <div>Documentation</div>
+        <UNavbarButton text="Pro" />
+        <UNavbarButton text="Teams" />
+        <UNavbarButton text="Pricing" />
+        <UNavbarButton text="Documentation" />
       </div>
     </div>
   );

@@ -1,2 +1,3 @@
-export * from "./UpperNavbar";
-export * from "./LowerNavbar";
+export * from "./LNavbarButton";
+export * from "./UNavbarButton";
+export * from "./Paragraphs";

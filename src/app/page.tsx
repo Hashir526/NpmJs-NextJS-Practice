@@ -1,5 +1,6 @@
-import { UpperNavber } from "@/atom";
-import LowerNavbar from "../components/atom/LowerNavbar/LowerNavbar";
+import { UpperNavber } from "../components/molecule";
+import LowerNavbar from "../components/molecule/LowerNavbar/LowerNavbar";
+import UpperMainContent from "../components/molecule/UpperMainContent/UpperMainContent";
 
 export default function Home() {
   return (
@@ -7,7 +8,7 @@ export default function Home() {
       <div className="w-full bg-orange-500 h-3"></div>
       <UpperNavber />
       <LowerNavbar />
-      <div className="w-full bg-purple-600 h-3"></div>
+      <UpperMainContent />
     </main>
   );
 }
