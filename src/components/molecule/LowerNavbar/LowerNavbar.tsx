@@ -4,6 +4,14 @@ import LNavbarButton from "../../atom/LNavbarButton/LNavbarButton";
 import Npm from "./../../../logo/Npm.png";
 
 export default function LowerNavbar() {
+  const navbarbutton: any = [
+    { text: "Sign in", textbordercolor: "border-gray-300" },
+    {
+      text: "Log in",
+      textbordercolor: "border-white",
+      hoverbordercolor: "hover:border-white",
+    },
+  ];
   return (
     <div className="flex flex-wrap sm:flex-nowrap sm:h-20 h-40 w-full md:px-28 sm:px-16 px-8 bg-white color text-black text-sm gap-8 ">
       <div className="flex w-full gap-4">
@@ -23,28 +31,20 @@ export default function LowerNavbar() {
       </div>
 
       <div className="self-center flex gap-8 ">
-        <LNavbarButton
-          text="Sign in"
-          textbutton={"btn"}
-          textbackgroundcolor={"bg-white"}
-          textbordercolor={"border-gray-300"}
-          textcolor={"text-black"}
-          textbordertype={"rounded-none"}
-          hoverbackgroundcolor={"hover:bg-white"}
-        />
-        {/* <button className="    hover:bg-white hover:border-white ">
-          Log In
-        </button> */}
-        <LNavbarButton
-          text="Log in"
-          textbutton={"btn"}
-          textbackgroundcolor={"bg-white"}
-          textbordercolor={"border-white"}
-          textcolor={"text-black"}
-          textbordertype={"rounded-none"}
-          hoverbackgroundcolor={"hover:bg-white"}
-          hoverbordercolor={"hover:border-white"}
-        />
+        {navbarbutton.map((item: any) => {
+          return (
+            <LNavbarButton
+              text={item.text}
+              textbutton={"btn"}
+              textbackgroundcolor={"bg-white"}
+              textbordercolor={item.textbordercolor}
+              textcolor={"text-black"}
+              textbordertype={"rounded-none"}
+              hoverbackgroundcolor={"hover:bg-white"}
+              hoverbordercolor={item.hoverbordercolor}
+            />
+          );
+        })}
       </div>
     </div>
   );

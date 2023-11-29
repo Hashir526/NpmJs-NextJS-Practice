@@ -11,6 +11,8 @@ const ContentButton = ({
   textsize,
   fontweigth,
   width,
+  hoverbackgroudcolor,
+  hoverbordercolor,
 }: {
   text: string;
   type: string;
@@ -22,10 +24,12 @@ const ContentButton = ({
   textsize: string;
   fontweigth: string;
   width: string;
+  hoverbackgroudcolor: string;
+  hoverbordercolor: string;
 }) => {
   return (
     <button
-      className={`btn ${type} ${flextype} ${backgroudcolor} ${bordercolor} ${textcolor} ${bordertype} ${textsize} ${fontweigth} ${width}`}
+      className={`btn ${type} ${flextype} ${backgroudcolor} ${bordercolor} ${textcolor} ${bordertype} ${textsize} ${fontweigth} ${width} ${hoverbackgroudcolor} ${hoverbordercolor}`}
     >
       {text}
     </button>
