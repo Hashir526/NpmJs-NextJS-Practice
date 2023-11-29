@@ -1,6 +1,6 @@
 import React from "react";
 
-function Paragraphs({
+const Paragraphs = ({
   text,
   mediumtextsize,
   smalltextsize,
@@ -18,7 +18,7 @@ function Paragraphs({
   textcolor: string;
   textalign: string;
   paddingyaxis: string;
-}) {
+}) => {
   return (
     <div className="flex justify-center items-center w-full ">
       <div className="flex justify-center items-center md:w-[40rem] sm:w-[30rem] ">
@@ -30,6 +30,6 @@ function Paragraphs({
       </div>
     </div>
   );
-}
+};
 
 export default Paragraphs;

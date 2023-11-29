@@ -1,5 +1,6 @@
 import React from "react";
 import Paragraphs from "../../atom/Paragraphs/Paragraphs";
+import ContentButton from "../../atom/ContentButton/ContentButton";
 
 export default function UpperMainContent() {
   return (
@@ -45,6 +46,36 @@ export default function UpperMainContent() {
         textalign={"text-center"}
         paddingyaxis={"py-4"}
       />
+
+      <div className="flex justify-center items-center w-full ">
+        <div className="flex flex-wrap sm:flex-row px-6 sm:px-0 justify-center items-center md:w-[35rem] sm:w-[30rem] gap-8 ">
+          <ContentButton
+            text={"Sign up for free"}
+            type={"flex"}
+            flextype={"flex-grow"}
+            backgroudcolor={"bg-yellow-400"}
+            bordercolor={"border-yellow-400"}
+            textcolor={"text-black"}
+            bordertype={"rounded-full"}
+            textsize={"text-lg"}
+            fontweigth={"font-bold"}
+            width={"w-60"}
+          />
+
+          <ContentButton
+            text={" Learn about pro"}
+            type={"flex"}
+            flextype={"flex-grow"}
+            backgroudcolor={"bg-orange-600"}
+            bordercolor={"border-orange-600"}
+            textcolor={"text-black"}
+            bordertype={"rounded-full"}
+            textsize={"text-lg"}
+            fontweigth={"font-bold"}
+            width={"w-60"}
+          />
+        </div>
+      </div>
     </div>
   );
 }
