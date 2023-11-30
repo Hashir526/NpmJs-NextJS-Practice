@@ -3,21 +3,14 @@ import Image from "next/image";
 import React from "react";
 import IconButton from "../../atom/IconButton/IconButton";
 import npm from "../../../logo/Npm.png";
-import TextInput from "../../atom/TextInput/TextInput";
+import prgram from "../../../logo/Program.png";
 import ContentButton from "../../atom/ContentButton/ContentButton";
 import TextButton from "../../atom/TextButton/TextButton";
+import TextInput from "../../atom/TextInput/TextInput";
 
-export default function SignUpPage() {
+const SignInPage = () => {
   const TextInputData: any = [
-    { TextInputName: "Username *", InputType: "text" },
-    {
-      TextInputName: "Email Address",
-      InputType: "email",
-      SideText:
-        "Your email address will be added to the metadata of packages that you publish, so it may be seen publicly.",
-      SideTextSize: "text-sm",
-      SideTextWidth: "w-full",
-    },
+    { TextInputName: "Username", InputType: "text" },
     {
       TextInputName: "Password",
       InputType: "password",
@@ -39,7 +32,11 @@ export default function SignUpPage() {
 
       <div className="card w-full py-10 text-black  ">
         <div className="card-body justify-center self-center bg-white rounded-lg w-[22rem] md:w-[30rem] ">
-          <h2 className="card-title border-b-2">Sign Up</h2>
+          <div className=" justify-center self-center">
+            <Image src={prgram} alt={"Picture"} width={200} />
+          </div>
+
+          <h2 className="card-title border-b-2">Sign In</h2>
 
           {TextInputData.map((item: any) => {
             return (
@@ -60,50 +57,35 @@ export default function SignUpPage() {
 
           <div className="py-2">
             <p className="text-sm w-full">
-              Minimum of 10 characters and must meet our{" "}
               <TextButton
                 href={""}
                 TextUnderline={"underline"}
-                Text={"password guidelines"}
+                Text={"Forgot Password?"}
               />
-            </p>
-          </div>
-
-          <div className="flex flex-row py-2">
-            <input type="checkbox" className="checkbox px-1" />
-            <p className="text-sm w-full">
-              I agree to the{" "}
-              <a href="" className="underline">
-                End User License Agreement
-              </a>{" "}
-              and the{" "}
-              <a href={""} className="underline">
-                Privacy Policy
-              </a>
             </p>
           </div>
 
           <div className="card-actions justify-center py-2">
             <ContentButton
-              text={"Sign Up"}
+              text={"Sign In"}
               backgroudcolor={"bg-white"}
               textcolor="text-black"
               width="w-full"
             />
           </div>
-        </div>
-
-        <div className="w-full py-4">
-          <div className="flex justify-center self-center">
-            <p>Already have an account? </p>
-            <TextButton
-              href={"/SignIn"}
-              TextUnderline={"underline"}
-              Text={"Sign In"}
-            />
+          <div className="w-full py-4">
+            <div className="flex justify-center self-center">
+              <TextButton
+                href={"/SignUp"}
+                TextUnderline={"underline"}
+                Text={"Create Account"}
+              />
+            </div>
           </div>
         </div>
       </div>
     </main>
   );
-}
+};
+
+export default SignInPage;

@@ -39,6 +39,7 @@ export default function UpperMainContent() {
       bordercolor: "border-yellow-400",
       hoverbackgroudcolor: "hover:bg-yellow-400",
       hoverbordercolor: "hover:border-yellow-400",
+      href: "/SignUp",
     },
     {
       text: "Learn about pro",
@@ -46,6 +47,7 @@ export default function UpperMainContent() {
       bordercolor: "border-orange-600",
       hoverbackgroudcolor: "hover:bg-orange-600",
       hoverbordercolor: "hover:border-orange-600",
+      href: "/Pro",
     },
   ];
   return (
@@ -82,6 +84,7 @@ export default function UpperMainContent() {
                 textsize={"text-lg"}
                 fontweigth={"font-bold"}
                 width={"w-60"}
+                href={item.href}
               />
             );
           })}

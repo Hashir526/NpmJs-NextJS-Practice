@@ -3,3 +3,4 @@ export * from "./ProPage";
 export * from "./PricingPage";
 export * from "./TeamsPage";
 export * from "./SignUpPage";
+export * from "./SignInPage";
