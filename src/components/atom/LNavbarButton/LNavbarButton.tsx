@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const LNavbarButton = ({
@@ -9,6 +10,7 @@ const LNavbarButton = ({
   textbordertype,
   hoverbackgroundcolor,
   hoverbordercolor,
+  width,
 }: {
   text: string;
   textbutton: string;
@@ -18,13 +20,16 @@ const LNavbarButton = ({
   textbordertype: string;
   hoverbackgroundcolor?: string;
   hoverbordercolor?: string;
+  width: string;
 }) => {
   return (
-    <button
-      className={`${textbutton} ${textbackgroundcolor} ${textbordercolor} ${textcolor} ${textbordertype} ${hoverbackgroundcolor} ${hoverbordercolor}`}
-    >
-      {text}
-    </button>
+    <Link href={`${text}`}>
+      <button
+        className={`${width} ${textbutton} ${textbackgroundcolor} ${textbordercolor} ${textcolor} ${textbordertype} ${hoverbackgroundcolor} ${hoverbordercolor}`}
+      >
+        {text}
+      </button>
+    </Link>
   );
 };
 

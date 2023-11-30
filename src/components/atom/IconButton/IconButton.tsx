@@ -12,7 +12,7 @@ const IconButton = ({
   alttext: string;
   height: string;
   width: string;
-  paddingyaxis: string;
+  paddingyaxis?: string;
 }) => {
   return (
     <button className="">

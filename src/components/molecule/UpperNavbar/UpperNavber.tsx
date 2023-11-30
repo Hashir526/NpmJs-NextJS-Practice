@@ -1,6 +1,7 @@
 import React from "react";
 import { FaHeart } from "react-icons/fa";
 import UNavbarButton from "../../atom/UNavbarButton/UNavbarButton";
+import Link from "next/link";
 
 export function UpperNavber() {
   const button: any = [
@@ -12,9 +13,6 @@ export function UpperNavber() {
     },
     {
       text: "Pricing",
-    },
-    {
-      text: "Documentation",
     },
   ];
   return (
@@ -29,6 +27,9 @@ export function UpperNavber() {
         {button.map((item: any) => {
           return <UNavbarButton text={item.text} />;
         })}
+        <Link href="https://docs.npmjs.com/">
+          <button className="">Documentation</button>
+        </Link>
       </div>
     </div>
   );

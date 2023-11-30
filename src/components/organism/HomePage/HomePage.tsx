@@ -8,13 +8,13 @@ import UpperMainContent from "../../molecule/UpperMainContent/UpperMainContent";
 const HomePage = () => {
   return (
     <main>
-      <div className="w-full bg-gradient-to-r from-violet-500 to-orange-500 h-3"></div>
+      <div className="w-full bg-gradient-to-r from-orange-500 to-violet-500 h-3"></div>
       <UpperNavber />
       <LowerNavbar />
       <UpperMainContent />
       <LowerMainContent />
       <Footer />
-      <div className="w-full bg-gradient-to-r from-violet-500 to-orange-500 h-3"></div>
+      <div className="w-full bg-gradient-to-r from-orange-500 to-violet-500 h-3"></div>
     </main>
   );
 };
