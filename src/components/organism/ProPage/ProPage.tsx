@@ -1,6 +1,7 @@
 import React from "react";
 import { UpperNavber } from "../../molecule";
 import LowerNavbar from "../../molecule/LowerNavbar/LowerNavbar";
+import ProUpperMainContent from "../../molecule/ProUpperMainContent/ProUpperMainContent";
 
 const ProPage = () => {
   return (
@@ -9,6 +10,7 @@ const ProPage = () => {
       <UpperNavber />
       <LowerNavbar />
       <div className="w-full bg-gradient-to-r from-violet-500 to-orange-500 h-3"></div>
+      <ProUpperMainContent />
     </main>
   );
 };

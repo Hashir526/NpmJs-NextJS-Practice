@@ -7,6 +7,8 @@ const ContentButton = ({
   flextype,
   backgroudcolor,
   bordercolor,
+  specificborder,
+  specificbordertype,
   textcolor,
   bordertype,
   textsize,
@@ -14,6 +16,8 @@ const ContentButton = ({
   width,
   hoverbackgroudcolor,
   hoverbordercolor,
+  hoverspecificborder,
+  hoverspecificbordertype,
   href,
 }: {
   text: string;
@@ -21,6 +25,8 @@ const ContentButton = ({
   flextype?: string;
   backgroudcolor: string;
   bordercolor?: string;
+  specificborder?: string;
+  specificbordertype?: string;
   textcolor?: string;
   bordertype?: string;
   textsize?: string;
@@ -28,12 +34,14 @@ const ContentButton = ({
   width: string;
   hoverbackgroudcolor?: string;
   hoverbordercolor?: string;
+  hoverspecificborder?: string;
+  hoverspecificbordertype?: string;
   href?: string;
 }) => {
   return (
     <Link href={`${href}`}>
       <button
-        className={`btn ${type} ${flextype} ${backgroudcolor} ${bordercolor} ${textcolor} ${bordertype} ${textsize} ${fontweigth} ${width} ${hoverbackgroudcolor} ${hoverbordercolor}`}
+        className={`btn ${type} ${flextype} ${backgroudcolor} ${bordercolor} ${specificborder} ${specificbordertype} ${textcolor} ${bordertype} ${textsize} ${fontweigth} ${width} ${hoverbackgroudcolor} ${hoverbordercolor} ${hoverspecificborder} ${hoverspecificbordertype}`}
       >
         {text}
       </button>

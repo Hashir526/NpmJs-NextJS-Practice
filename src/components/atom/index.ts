@@ -5,3 +5,4 @@ export * from "./IconButton";
 export * from "./FooterContent";
 export * from "./TextInput";
 export * from "./TextButton";
+export * from "./PackageDetails";
