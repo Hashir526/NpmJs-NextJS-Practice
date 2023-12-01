@@ -17,7 +17,7 @@ const Paragraphs = ({
   fontweight?: string;
   textcolor: string;
   textalign: string;
-  paddingyaxis: string;
+  paddingyaxis?: string;
 }) => {
   return (
     <div className="flex justify-center items-center w-full ">

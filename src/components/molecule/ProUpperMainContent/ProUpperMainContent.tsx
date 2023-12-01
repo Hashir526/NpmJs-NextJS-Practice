@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import program from "../../../logo/Program.png";
+import github from "../../../logo/github.png";
+import next from "../../../logo/next.svg";
 import Paragraphs from "../../atom/Paragraphs/Paragraphs";
 import ContentButton from "../../atom/ContentButton/ContentButton";
 import PackageDetails from "../../atom/PackageDetails/PackageDetails";
@@ -36,14 +38,29 @@ const ProUpperMainContent = () => {
       hoverspecificbordertype: "hover:border-transparent",
       href: "/",
     },
+  ];
+
+  const packagedata: any = [
     {
-      id: 2,
-      text: "Learn about pro",
-      backgroudcolor: "bg-orange-600",
-      bordercolor: "border-orange-600",
-      hoverbackgroudcolor: "hover:bg-orange-600",
-      hoverbordercolor: "hover:border-orange-600",
-      href: "/Pro",
+      image: program,
+      altext: "package one",
+      firsttext: "Unlimited public packages",
+      secondtext:
+        "Bring the best of open source JavaScript development to your own projects.",
+    },
+    {
+      image: github,
+      altext: "package two",
+      firsttext: "Unlimited private packages",
+      secondtext:
+        "Seamlessly integrate public and private packages into your development cycle.",
+    },
+    {
+      image: next,
+      altext: "package three",
+      firsttext: "Package-based permissions",
+      secondtext:
+        "Add collaborators to work on your public and private packages together.",
     },
   ];
   return (
@@ -65,7 +82,7 @@ const ProUpperMainContent = () => {
           />
         );
       })}
-      <div className=" flex justify-center items-center w-full ">
+      <div className=" flex justify-center items-center w-full py-8 ">
         <div className="flex flex-wrap sm:flex-row px-6 sm:px-0 justify-center items-center md:w-[35rem] sm:w-[30rem] gap-8 ">
           {button.map((item: any) => {
             if (item.id === 1) {
@@ -94,7 +111,26 @@ const ProUpperMainContent = () => {
           })}
         </div>
       </div>
-      <PackageDetails />
+      {packagedata.map((item: any) => {
+        return (
+          <PackageDetails
+            image={item.image}
+            alttext={item.alltext}
+            width={"w-20"}
+            height={"h-20"}
+            firsttext={item.firsttext}
+            firsttextsize={"text-xl"}
+            firsttextcolor={"text-black"}
+            firsttextalign={"text-center"}
+            firstfontweight={"font-bold"}
+            secondtext={item.secondtext}
+            secondtextsize={"text-sm"}
+            secondtextcolor={"text-black"}
+            secondtextalign={"text-center"}
+            paddingyaxis="py-2"
+          />
+        );
+      })}
     </div>
   );
 };
